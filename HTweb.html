@@ -1,0 +1,1598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <style>
+    * {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+    }
+    
+      body {
+      background-image: linear-gradient(rgba(0, 0, 0, 1.25), rgba(0, 0, 0, 0.1)), url(https://raw.githubusercontent.com/8-TECH/8TECH-/main/4nbg.jpeg);
+      width: 100%;
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+
+    .navb {
+      position: sticky;
+      top: 0;
+    }
+    .navb {
+      width: 100%;
+      height: 60px;
+      background: orange;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    
+    .navb a{
+    margin-left:10px;
+    color:#fff;
+    text-transform:uppercase;
+    position:relative;
+    font-family:serif;
+  }
+   a::after{
+    content:'';
+    width:0%;
+    height:1.7px;
+    background:#00FFEF;
+    transition:.5s;
+    left:0;
+    position:absolute;
+     top:18px;
+  }
+ .navb a:hover::after{
+    width:100%;
+  }
+
+    .logo {
+      color: #000;
+      font-family: Serif;
+      font-weight: 700;
+      margin-left: 30px;
+      font-size:18px;
+    }
+
+    ul {
+      float: right;
+    }
+
+    .navb li {
+      display: inline-block;
+      margin: 0 5px;
+    }
+
+    .navb li a {
+      border-radius: 8px;
+      color: #000;
+      padding: 0 2px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .menu-btn {
+      display: none; /* Initially hide the menu button for larger screens */
+      cursor: pointer;
+    }
+
+    .menu-img {
+      width: 25px; /* Set the width of the menu image */
+    }menu-btn {
+      display: none; /* Initially hide the menu button for larger screens */
+      cursor: pointer;
+    }
+    
+        .checkbtn {
+      display: none;
+      color: #fff;
+      float: right;
+      line-height: 8px;
+      margin-right: 15px;
+      cursor: pointer;
+    }
+
+    #check {
+      display: none;
+    }
+    
+    @media (max-width: 1024px) {
+      .menu-btn {
+        display: block; /* Show the menu button for smaller screens */
+      }
+
+      .checkbtn {
+        display: block;
+      }
+
+      #check:checked ~ ul {
+        left: 0;
+      }
+    }
+
+
+    @media (max-width:1024px) {
+      label.logo {
+        font-size: 15px;
+        padding: 10px;
+      }
+
+      nav ul li a {
+        font-size: 15px;
+      }
+
+      ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: orange;
+        top:60px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+      }
+
+      .navb ul li {
+        display: block;
+        margin: 30px 0;
+        line-height: 30px;
+      }
+
+      nav ul li a {
+        font-size: 15px;
+      }
+
+      
+
+ /* Update slideshow container styles */
+.slideshow-container {
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Update individual slide styles */
+.mySlides {
+  display: none;
+  width: 100%;
+  animation: slide 2.5s ease-in-out infinite; /* Adjust duration as needed */
+}
+
+.mySlides img {
+  width: 100%;
+  height: auto;
+}
+
+/* Keyframe animation for sliding effect */
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  20% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+    .cont1 img {
+     max-width:100vw;
+    }
+        
+    .search-container {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      justify-content:center;
+      max-width:90vw;
+    }
+     
+    #searchInput {
+      
+      padding: 8px;
+      border: none;
+      border-radius: 4px;
+      width:90%;
+      color: #333;
+      margin-right:10px;
+    }
+
+    #searchButton {
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 8px;
+      cursor: pointer;
+    }
+
+    #searchButton:hover {
+      background-color: #2980b9;
+    }
+
+    #searchResults {
+      margin-top: 10px;
+      color: #27ae60;
+    }
+
+    #notFoundMessage {
+      margin-top: 10px;
+      color: #e74c3c;
+    }
+
+    .search-result-item {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      background:#fff;
+    }
+
+    .result-image {
+     max-width:50%; /* Adjust the image width as needed */
+      height: auto;
+      margin-right: 10px;
+    } 
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+      
+      
+      .slideshow-container {
+        max-width: 600px;
+        position: relative;
+        margin: auto;
+        z-index:-1;
+      }
+    }
+
+   /* Update individual slide styles */
+.mySlides {
+  display: none;
+  width: 100%;
+  animation: flip 10s linear infinite; /* Adjust duration as needed */
+  transform-style: preserve-3d;
+}
+
+.mySlides img {
+  width: 100%;
+  height: auto;
+  transform: rotateY(0deg);
+  transform-origin: center center;
+}
+
+/* Keyframe animation for 3D flipping effect */
+@keyframes flip {
+  0%, 100% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+}
+
+
+    footer {
+      text-align: center;
+      color: #fff;
+      background: #333;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  
+  .phm img{
+  border-radius:10px;
+  width:58vw;
+  margin:10px;
+  float:right;
+  
+}
+.phm img:hover{
+  border:1px solid #0ef;
+}
+.phm button{
+  width:32%;
+  border-radius:10px;
+  margin:5px;
+  transition:all 0.5s;
+  background:black;
+  color:#fff;
+  font-weight:bold;
+  font-family:serif;
+  font-size:13px;
+  height:35px;
+  
+}
+.phm button:hover{
+  background:blue;
+}
+  .phm{
+    margin:40vw 0;
+    line-height:5vh;
+  }
+    .collection{
+      display:flex;
+    
+      }
+      .collection img{
+        width:45vw;
+      }
+    .col,.coll{
+      flex-basis:50%;
+      margin:10px;
+      background:#fff;
+      padding:1px;
+    }
+    
+    .social-media{
+      margin:30px;
+    color:#fff;
+  }
+    .social-media a{
+      margin-left:20px;
+    }
+    h2{
+      margin:30px;
+      font-family:serif;
+      color:#fff;
+    }
+    
+    .contact img{
+      width:30vw;  
+    }
+  </style>
+
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+
+<nav class="navb">
+  <div class="logo">HAMZONE TECH PHONE REPAIR </div>
+  <div class="menu-btn" onclick="toggleMenu()">
+    <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/menu.png" alt="Menu Button" class="menu-img">
+  </div>
+  <input type="checkbox" id="check" onclick="toggleMenu()">
+ 
+
+  <ul>
+    <li><a href="#" class="active">Screen Replacement</a></li>
+    <li><a href="#">Battery Replacement</a></li>
+    <li><a href="#">Water Damage</a></li>
+    <li><a href="#">Mouth Piece</a></li>
+    <li><a href="#">Charging System</a></li>
+    <li><a href="#">Flashing</a></li>
+    <li><a href="#">Screen Protector</a></li>
+    <li><a href="#">Speaker Replacement</a></li>
+    <li><a href="#">Accessories</a></li>
+  </ul>
+</nav>
+  
+<center> 
+  <div class="search-container">
+  <input type="text" id="searchInput" placeholder="Type your search here">
+  <button id="searchButton" onclick="searchItem()">Search</button>
+  </div>
+  </center>
+  <center>
+    
+<div id="searchResults"></div>
+<div id="notFoundMessage"></div>
+
+<div>
+  <img src="https://example.com/path/to/your/default-image.jpg" alt="Default Image" id="defaultImage" style="display: none;">
+</div>
+
+</center>
+  
+  <div class="cont1">
+    <center>
+      <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/Hm1.png">
+    </center>
+    </div>
+    <center>
+    <div class="slideshow-container">
+      <div class="mySlides">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/4n2.jpeg">
+      </div>
+
+      <div class="mySlides">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/Hm1.jpg">
+      </div>
+
+      <div class="mySlides">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/Hm4.jpg">
+      </div>
+      
+     <div class="mySlides">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/Hm5.jpg">
+      </div>
+      
+      <div class="mySlides">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/Hm6.jpg">
+      </div>
+      
+      <div class="mySlides">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/4nr4.jpeg">
+      </div>
+      
+        <div class="mySlides">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/4n3.jpeg">
+      </div>
+
+      <div class="mySlides">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/4nr7.jpeg">
+      </div>
+
+      <div class="mySlides">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/Lt1.jpeg">
+      </div>
+      
+     <div class="mySlides">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/4n1.jpeg">
+      </div>
+      
+      <div class="mySlides">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/4nr6.jpeg">
+      </div>
+      
+      <div class="mySlides">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/4nr5.jpeg">
+      </div>
+      
+      <div class="mySlides">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/3nr10.jpeg">
+      </div>
+      
+      <div class="mySlides">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/4nr8.jpeg">
+      </div>
+      
+      <div class="mySlides">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/4nr9.jpeg">
+      </div>
+      
+      <div class="mySlides">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/4nc.jpg">
+      </div>
+      
+      <div class="mySlides">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/4nb.jpg">
+      </div>
+      
+      <div class="mySlides">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/4na.jpg">
+      </div>
+    
+    </div>
+  </center>
+  <br>
+  <div class="phm">
+    <div>
+  <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/Cn.jpeg" class="responsive" id="image">
+  <div>
+ 		<button  onclick="changeImage()">SCREEN REPLACEMENT</button>
+  </div>
+  
+   <div>
+ 		<button  onclick="changeImg()">CHARGING SYSTEM</button>
+  </div>
+
+   <div>
+ 		<button  onclick="changeIm()">FLASHING
+ 		  UNLOCKING</button>
+  </div>
+  
+   <div>
+ 		<button  onclick="changeI()">BATTERY REPLACEMENT</button>
+  </div>
+
+  <div>
+ 		<button  onclick="changeIg()">WATER DAMAGE</button>
+  </div>
+    </div>
+  </div>
+  
+  
+  <center>
+    <div class="collection">
+      <div class="coll">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/Flash disk 2.jpeg" class="responsive" id="image">
+      </div>
+      
+      <div class="col">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/Flash disk.png" class="responsive" id="image">
+      </div>
+    </div>
+  </center>
+  <center>
+    <div class="collection">
+      <div class="coll">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/Flash disk3.jpeg" class="responsive" id="image">
+      </div>
+      
+      <div class="col">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/Flash disk4.jpeg" class="responsive" id="image">
+      </div>
+    </div>
+  </center>
+  
+  <center>
+    <div class="collection">
+      <div class="coll">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/Charger.png" class="responsive" id="image">
+      </div>
+      
+      <div class="col">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/Samsung Charger .jpg" class="responsive" id="image">
+      </div>
+    </div>
+  </center>
+  
+  <center>
+    <div class="collection">
+      <div class="coll">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/Oraimo Charger .jpeg" class="responsive" id="image">
+      </div>
+      
+      <div class="col">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/Oraimo Cable1.jpeg" class="responsive" id="image">
+      </div>
+    </div>
+  </center>
+  
+  <center>
+    <div class="collection">
+      <div class="coll">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/Pune cable.jpeg" class="responsive" id="image">
+      </div>
+      
+      <div class="col">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/Cable.jpeg" class="responsive" id="image">
+      </div>
+    </div>
+  </center>
+  
+  <center>
+    <div class="collection">
+      <div class="coll">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/Cover1.jpeg" class="responsive" id="image">
+      </div>
+      
+      <div class="col">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/Cover2.jpeg" class="responsive" id="image">
+      </div>
+    </div>
+  </center>
+  
+  
+<center>
+    <div class="collection">
+      <div class="coll">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/Cover3.jpeg" class="responsive" id="image">
+      </div>
+      
+      <div class="col">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/Cover4.jpeg" class="responsive" id="image">
+      </div>
+    </div>
+  </center>
+  
+  
+  <center>
+    <div class="collection">
+      <div class="coll">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/SrPr4.jpeg" class="responsive" id="image">
+      </div>
+      
+      <div class="col">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/ScPr1.jpg" class="responsive" id="image">
+      </div>
+    </div>
+  </center>
+
+  
+  <center>
+    <div class="collection">
+      <div class="coll">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/ScPr3.jpeg" class="responsive" id="image">
+      </div>
+      
+      <div class="col">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/ScPr5.jpeg" class="responsive" id="image">
+      </div>
+    </div>
+  </center>
+
+  
+  <center>
+    <div class="collection">
+      <div class="coll">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/Smart Phone battery .jpeg" class="responsive" id="image">
+      </div>
+      
+      <div class="col">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/Kabambe battery .jpg" class="responsive" id="image">
+      </div>
+    </div>
+  </center>
+
+  
+  <center>
+    <div class="collection">
+      <div class="coll">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/Acc1.jpeg" class="responsive" id="image">
+      </div>
+      
+      <div class="col">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/Earphone .jpg" class="responsive" id="image">
+      </div>
+    </div>
+  </center>
+
+  
+  <center>
+    <div class="collection">
+      <div class="coll">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/Earphone2.jpg" class="responsive" id="image">
+      </div>
+      
+      <div class="col">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/Earphone3.jpg" class="responsive" id="image">
+      </div>
+    </div>
+  </center>
+
+<center>
+    <div class="collection">
+      <div class="coll">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/Earpods.jpg" class="responsive" id="image">
+      </div>
+      
+      <div class="col">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/Usb.jpg" class="responsive" id="image">
+      </div>
+    </div>
+  </center>
+
+<center>
+    <div class="collection">
+      <div class="coll">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/Cover.jpg" class="responsive" id="image">
+      </div>
+      
+      <div class="col">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/Cover4.jpg" class="responsive" id="image">
+      </div>
+    </div>
+  </center>
+
+<center>
+    <div class="collection">
+      <div class="coll">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/Hcover.jpg" class="responsive" id="image">
+      </div>
+      
+      <div class="col">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/Cover5.jpeg" class="responsive" id="image">
+      </div>
+    </div>
+  </center>
+
+<center>
+    <div class="collection">
+      <div class="coll">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/Card Reader .jpg" class="responsive" id="image">
+      </div>
+      
+      <div class="col">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/Otg1.jpg" class="responsive" id="image">
+      </div>
+    </div>
+  </center>
+
+<center>
+    <div class="collection">
+      <div class="coll">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/Type C cable.jpg" class="responsive" id="image">
+      </div>
+      
+      <div class="col">
+        <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/Icable.jpg" class="responsive" id="image">
+      </div>
+    </div>
+  </center>
+  <center>
+  <h2>CONTACT US</h2>
+    <div class="contact">
+    <img src="https://raw.githubusercontent.com/8-TECH/8TECH-/main/WhatsApp.png" class="responsive" id="image">
+  <h2>+254700144600</h2>
+      </div>
+  </center>
+  <center>
+     <div class="social-media">
+  <a href="#"><i class="fab fa-twitter"></i></a>
+  <a href="#"><i class="fab fa-instagram"></i></a>
+  <a href="#"><i class="fab fa-whatsapp"></i></a>
+  <a href="#"><i class="fab fa-facebook"></i></a>
+  <a href="#"><i class="fas fa-envelope"></i></a>
+</div>
+  </center>       
+  <center> <h1>HAMZONE TECH</h1> </center> 
+
+  <script>
+    function toggleMenu() {
+    var check = document.getElementById("check");
+    check.checked = !check.checked;
+  }
+      
+    
+    let slideIndex = 0;
+
+function showSlides() {
+  const slides = document.getElementsByClassName("mySlides");
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slideIndex++;
+
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+
+  slides[slideIndex - 1].style.display = "block";
+}
+
+setInterval(showSlides, 4000);
+
+  function changeImage() {
+			var img = document.getElementById("image");
+		  img.src = "https://raw.githubusercontent.com/8-TECH/8TECH-/main/Screen Rep.jpeg";
+		}
+  
+  
+  function changeImg() {
+			var img = document.getElementById("image");
+		  img.src = "https://raw.githubusercontent.com/8-TECH/8TECH-/main/Charging Port Fixes .jpeg";
+		}
+  
+  function changeIm() {
+			var img = document.getElementById("image");
+		  img.src = "https://raw.githubusercontent.com/8-TECH/8TECH-/main/Flashing.jpeg";
+		}
+  
+  
+  function changeI() {
+			var img = document.getElementById("image");
+		  img.src = "https://raw.githubusercontent.com/8-TECH/8TECH-/main/Battery Rep.jpeg";
+		}
+  
+  function changeIg() {
+			var img = document.getElementById("image");
+		  img.src = "https://raw.githubusercontent.com/8-TECH/8TECH-/main/Water D.jpeg";
+		}
+    
+    
+    
+    var items = [
+    { name: 'Samsung A03 Core Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/Sc7.jpg'},
+    { name: 'Samsung A03S Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/Sc6.jpeg' },
+    { name: 'Samsung A02S Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/Sc6.jpg' },
+    { name: 'Samsung A04 Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg'},
+    { name: 'Samsung A11 Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung M11 Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A12 Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung M12 Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg'},
+    { name: 'Samsung A13 Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung M13 Ksh.3,000 ', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung M33 Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A14 Ksh.3,200', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A20 Org Ksh.4,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg'},
+    { name: 'Samsung A20 Ksh.Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A20s Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A21s Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg'},
+    { name: 'Samsung A21 Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A22 Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A23 Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A24 Ksh.7,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg'},
+    { name: 'Samsung A26 Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A30s Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A32 ORG Ksh.6,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A32 Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A30 ORG Ksh.5,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A31 Org Ksh.5,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A31 Ksh.3,200', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A33 Ksh.5,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A34 5G Ksh.7,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A34 4G Framed Ksh.15,300', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A40 Org Ksh.11,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A41 Org Ksh.11,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A40s Ksh.7,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A40 Ksh.7,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A41 Ksh.7,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A42 Ksh.7,200', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A50 Ksh.4,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A50s Ksh.4,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A50 ORG Ksh.5,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A51 Org Ksh.5,200', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A51 Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A52 ORG Ksh.5,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A52 Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A53 ORG Ksh.7,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A53 Ksh.3,200', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A54 Ksh.10,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A60 Org Ksh.6,700', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A60 Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung M4 Ksh.5,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung J6 ORG Ksh.7,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung J8 Ksh.5,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung J6 Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A6 Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A70 Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A70 ORG 11,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A70 Small Glass Ksh.6,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A70 Big Glass Ksh.7,600', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A70S Ksh.11,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A71 ORG Ksh.5,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A71 Ksh.4,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A72 ORG Ksh.5,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A72 Ksh.4,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A73 5G Ksh.5,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A73 Ksh.4,200', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A73 ORG Ksh.17,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A75 Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A75 ORG Ksh.6,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A80 ORG Framed Ksh.15,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A80 Ksh.6,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A80S Ksh.7,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A81 Ksh.4,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A90 Org Ksh.14,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung A91 Org Ksh.15,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung S1 Ksh.4,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung S3 Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung S4 Ksh.4,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung S5 Ksh.4,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung S5 MINI Ksh.6,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung S6 Ksh.7,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung S7 Edge Ksh.13,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung S8 Ksh.15,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung S8 Plus Ksh.17,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung S9 Ksh.15,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung S9 Plus Ksh.18,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung S10 Framed Oled Ksh.14,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung S10 5G Ksh.30,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung S10 Lite Ksh.18,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung S10 ORG Ksh.25,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/ SR 1.jpeg' },
+    { name: 'Samsung S20 Ksh.21,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung S20 Plus Ksh.16,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung S21 Ksh.26,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung S21 Plus Ksh.16,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung S22 Ksh.28,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung S22 Plus Ksh.28,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung S22 Ultra Ksh.44,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Samsung S23 Ultra Ksh.50,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/S23 Ultra.jpeg' },
+    { name: 'Huawei Nova 7 Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei Nova11 Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei Tab Mate Pad 11 Ksh.7,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei Nova11 Org Ksh.21,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei Mate 40 Pro Ksh.25,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei Honor X8 Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei Honor X9 Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei P50 Pro Ksh.21,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei MediaPad M3 Lite Ksh.6,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei Honor X6 Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei Honor 9X Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei Honor 8X Max Ksh.5,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei Y5 2019 Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei Honor 30 Lite Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei Nova Y90 Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei Honor X7 Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei Nova 9 Ksh.8,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei Nova 9 Pro Ksh.22,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei Nova 9 SE Ksh.4,700', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei Nova 8 Pro Ksh.17,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei Honor 8 Max Ksh.6,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei Nova 8I Ksh.4,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei Mate S Ksh.3,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei Mate 9 Ksh.Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei Mate 8 Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei Mate 10 Pro Ksh.4,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei Mate 20 Ksh.10,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei Mate 20 Lite Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei Mate 10 Ksh.4,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei Mate 10 Lite Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei Honor 9 Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei Honor 9 Lite Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei Honor View 10 Ksh.3,700', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei Honor V9 Ksh.3,600', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei P6 Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei Honor 8C Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei Honor 8 Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO CK8/ CAMON 20 PRO COMPLETE LCD OLED Ksh.8,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO CK9 5G / CAMON 20 PREMIER COMPLETE LCD Ksh.6,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO PHANTOM X2/ AD8 COMPLETE LCD OLED Ksh.10,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO LE8 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO KI8 C OMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO CK7N COMPLETE LCD Ksh.8,200', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO CI7 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO CK6/ CAMON 20 COMPLETE LCD Ksh.7,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO CI8/ CI8N/ CAMON 19 PRO COMPLETE LCD Ksh.3,200', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO KI7 COMPLETE LCD Ksh.3,300', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO KI5 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO BF7/ X6516 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO BE8 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO KH7 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO CI6/ CAMON 19 COMPLETE LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO KG5P/ SPARK 9 COMPLETE LCD Ksh.3,400', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO KH6/SPARK9T COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO LA7 (TOUCH)/ POUVIOR 2 COMPLETE LCD Ksh.2,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO KG5K/ KG5J/ KG5P SPARK 9/ SPARK 8C COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO KF6J/SPARK 7/X659/BD3 COMP LCD Ksh.2,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO BE7/POP 6 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO CI8N COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO CH9 COMPLETE LCD Ksh.4,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO BE6 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO BC1S COMPLETE LCD 3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO B1C COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO KG8 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO KG5 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO CH7 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO KC2 COMPLETE LCD Ksh.2,900', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO KG7 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO CH8 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO M9 COMP LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO M6 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO LB6 POUVOIR 2 AIR COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO LA6/POUVOIR 1 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO LA7(GLASS) /POUVOIR 2 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO L9 PLUS COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO L8 LITE COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO L7 COMPLETE LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO KC6/KC1/[SPARK 4] /SPARK GO 2020 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO K9 / SPARK PLUS COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO K7/K8 /SPARK PRO COMP LCD Ksh.2,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO N9 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO M6/L6 LCD ONLY Ksh.2,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO M7/S7 LCD Ksh.1,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO M3/S3/B3/H3/IT1350 45PIN LCD Ksh.1,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO M5/S5 LCD Ksh.1,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO LB7/POUVOIR 3 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO L8/L8 PLUS COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO L5 LCD Ksh.1,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO KB8 /SPARK 3PRO/KB3 /KB2 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO KA7 [TOUCH]COMP LCD Ksh.2,900', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO J8 COMPLETE LCD Ksh.2,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO C8 COPY 1/J8 COPY 2 LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO J5 LCD Ksh.1,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO I3 COMP LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO H7 COMPLETE LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO H6 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO H6 LCD ONLY Ksh.2,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO F3 / POP 1/F3 PRO COMPLETE LCD  Ksh.2,700', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO PHANTOM 6S/A6 COMPLETE LCD Ksh.8,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO CG9 COMP LCD Ksh.5,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO PHANTOM X COMPLETE LCD ORG Ksh.7,600', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO CE8 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO BC2/POP4 COMP LCD Ksh.2,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO CC9 /POUVIOR3+/CAMON 12 PRO COMP LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO CAMON 11/PRO/CF7 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL A56/TECNO RB8S/W6004 /A56 PRO COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO S6 /WX3 LITE/R6/F2/A32F/A15/F1 LCD Ksh.1,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TAB TECNO PP7F PRO COMP LCD Ksh.4,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TAB TECNO G9 LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO F7 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO F5 LCD Ksh.1,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO F6 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO F3 / POP 1 LCD ONLY Ksh.2,700', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO D5 LCD Ksh.1,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO CX /CAMON C10 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO CX AIR COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO CX-AIR LCD ONLY Ksh.2,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO CA7 CAMON X [GLASS]COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO CA8 / CAMON X-PRO COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO C9 LCD ONLY Ksh.2,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO C9 COPY 2 LCD Ksh.2,700', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO C9 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO C8 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO C7 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO C5 COMPLETE LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO B1P/POP 2 POWER COMP LCD Ksh.2,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO B5 LCD Ksh.1,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL A11 / TECNO S1 LCD Ksh.1,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO TAB 8H LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TAB TECNO P8D LCD ONLY Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TAB TECNO 7D/P701/P702/7C PRO LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL 1513/ TECNO WX3 LCD Ksh.1,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO CA7 [TOUCH] COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO B1G COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO CG6J/KF8 CAMON 17 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO KA6 COMP LCD Ksh.4,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO BC3/POP 4 PRO S COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO CC6/KC3/C 12AIRX652 LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO PHANTOM 9 COMP LCD ORIGINAL Ksh.5,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO CE9/X687/ CAMON 16 PREMIER COMP LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO B1/ B1F COMPLETE LCD Ksh.2,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO LC7/LC8/KD6/SPARK 5 AIR/KE6 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO BB2/POP 3 COMP LCD Ksh.2,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO LB8 COMP LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO LC6 /POUVIOR 3 AIR COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO CA6/CM/KA9/IN3/IN5 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO L6 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO L9 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO Y6/C8 MINI COPY LCD Ksh.1,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TECNO Y5/Y6 LCD Ksh.1,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA TAB T21 COMPLETE LCD Ksh.5,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA C32 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA C3 2020 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA C22/ C32 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA C12 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA C31 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA G60 COMPLETE LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA C1 (2ND EDITION) COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA T20 TAB COMPLETE LCD Ksh.8,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA C21 COMPLETE LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA G50 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA G11/ G21 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA C20 PLUS COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA 7 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA X6/NOKIA 6.1 PLUS COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA 6.1 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA 5 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA 5.1 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA 3.1C COMPLETE LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA 7.2/6.2 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA 7.1 PLUS/8.1 /X7 COMP LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA 7.1 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA 6 /TA-1000 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA 4.2 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA 3 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA 3.1 PLUS COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA 3.2 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA 2 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA 2.2 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA 1 (TA-1071) COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA 2.1/ 2.1 PLUS COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA 925 COMP LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA N930 COMP LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA N920 COMP LCD Ksh.3,200', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA N830 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA N8 SIROCCO COMP LCD Ksh.20,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA 800 COMP LCD Ksh.2,900', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA 820 COMP LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA N730/N735/RM 1040/1038 COMP LCD Ksh.3,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA N650(RM 1152) COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA N630/635 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA N640 /RM1077/1072 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA 900 COMP LCD Ksh.3,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA N720 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA N540 N1141/N1140 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA N550 COMP LCD Ksh.2,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA C10/C20/C21 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA 950 COMP LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA 950 XL/RM 1116 COMP LCD Ksh.9,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA 640 XL/RM-1067 COMPLETE LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA 625 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA 1 PLUS /1.1PLUSCOMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA 1520 COMP LCD Ksh.5,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA 1320 COMPLETE LCD Ksh.5,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA 1020 COMPLETE LCD Ksh.5,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA XL COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA 1.3 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA 2.4 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA C2 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA C3 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA 5.3 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA 5.2/NK2.3 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA 8.3 COMP LCD Ksh.5,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA C1 COMP LCD Ksh.2,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA X5 -2018/ 5.1+COMP LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA X2 DUOS COMPLETE LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA 7 PLUS 2018 /TA-1046 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA 8 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NOKIA 3.1 2018(TA-1063) COMP Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI POCO X3 COMLETE LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI POCO M6 PRO 5G COMPLETE LCD Ksh.3,700', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI POCO M4 PRO COMPLETE LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI POCO F5 PRO COMPLETE LCD Ksh.19,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI POCO X4 PRO COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI POCO C3 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI NOTE 12 PRO 5G COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI NOTE 11 5G COMPLETE LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI NOTE 12S COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI 9 LITE/XIAOMI 9LITE COMPLETE LCD ORG Ksh.4,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI NOTE 8T COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI NOTE 12 PRO COMPLETE LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI NOTE 12 COMPLETE LCD Ksh.Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI POCO M4 PRO (4G) COMPLETE LCD Ksh.3,300', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI A2 PLUS (A2+) COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI 12C COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI POCO M5 COMPLETE LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI POCO C40 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI 10 PRIME COMPLETE LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI PRO COMP LCD Ksh.5,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI A1 PLUS COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI Y2 COMPLETE LCD Ksh.3,400', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI POCO M3 PRO COMPLETE LCD Ksh.3,700', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI NOTE 11 S COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI 10A COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI NOTE 10 PRO MAX COMPLETE LCD ORG Ksh.7,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI 10C COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI POCO X3 PRO COMPLETE LCD Ksh.4,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI POCO X2 COMPLETE LCD Ksh.3,600', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Redmi Note 8 Pro Complete Lcd ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI NOTE 11S COMPLETE LCD Ksh.5,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI NOTE 10 PRO MAX COMPLETE LCD Ksh.5,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI NOTE 10S COMPLETE LCD Ksh.5,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI NOTE 10C COMPLETE LCD Ksh.5,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI /XIAOMI NOTE 10 [FLAT] COMPLETE LCD ORG Ksh.4,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI 11 LITE COMPLETE LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI NOTE 11 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI NOTE 11 PRO COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI NOTE 10 PRO 5G COMPLETE LCD Ksh.4,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Redmi/ Xiaomi Note 10 [FLAT] Org LCD Ksh.7,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'XIAOMI A3 /REDMI MI A3 C COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI NOTE 10 FLAT COPY COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI/XIAOMI NOTE 10 PRO/NOTE 10/NOTE 10 LITE [CURVED] COMPLETE LCD Ksh.7,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI K30 COMP LCD Ksh.4,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI XIAOMI 3 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI A3/XIAOMI MI A3 C COMPLETE LCD ORG Ksh.8,100', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI NOTE 8 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI S2/Y2 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI NOTE 8 PRO COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI 10 COMPLETE LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'XIAOMO 9T/REDMI 9T/REDMI K20 PRO /MI 9T COMP LCD ORIGINAL Ksh.7,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI MI MIX COMP LCD Ksh.5,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI 9 LITE/XIAOMI 9LITE COMP LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI NOTE 9S/REDMI NOTE 9 PRO COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI 9A/9C COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI PLAY COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'XIAOMI 9T /REDMI 9T /MI 9T/XIAOMI K20 PRO COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI 9 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI 7A COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI 6X/REDMI A2 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI 8A/8 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI 6A PRO COMP LCD Ksh.3,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI Y1 /NOTE 5A PRIME COMP LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI PRO COMP LCD Ksh.5,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI NOTE 5 PRO COMP LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI NOTE 6PRO/NOTE 6/NOTE 6PLUS/M8LITE COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI NOTE 4X COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI NOTE LITE/XIAOMI NOTE LITE COMP LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI NOTE 5A/NOTE 5A+ COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI NOTE 4 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI NOTE 3 PRO COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI NOTE 3COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI NOTE 2 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI 6 PRO /A2 LITE COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI 7 COMP LCD Ksh.2,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI 8 LITE/XIAOMI 8 LITE COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI A1 /5X COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI MAX 2/MAX COMP LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI MAX3 COMP LCD Ksh.4,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI 6/6ACOMP LCD Ksh.2,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI 5S COMP LCD Ksh.3,700', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI 5 PRO COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI 5 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI 5C COMP LCD Ksh.3,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI 5A /GO COMP LCD ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI 4X COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI 4 PRO COMP LCD Ksh.3,500 ', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI/XIAOMI/MI 4 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI 4C/4I COMP LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI 4A COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI 2 /2S COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REDMI 3/REDMI 3S/REDMI 3X/REDMI 3S PRO COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REALME GT MASTER COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO REALME NARZO 50 5G COMPLETE LCD Ksh.8,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO REALME C55 COMPLETE LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO REALME C30 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO REALME 1 COMPLETE LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO REALME C33 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO REALME C31 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO REALME C30S COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO REALME X7 COMPLETE LCD Ksh.3,700', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO REALME C35 COMPLETE LCD Ksh.4,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A1K/REALME C2 COMP LCD Ksh.2,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO REALME X2 PRO COMPLETE LCD Ksh.5,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO REALME 8 PRO COMPLETE LCD Ksh.5,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO REALME C11/ C12 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A3S / A5/A12E/ REALME C1 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A92/A52/REALME 6/A92-2020/A72-2020 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO REALME C21Y COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO REALME C3 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO REALME 6 PRO COMP LCD Ksh.4,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO REALME 7 COMP LCD Ksh.4,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO REALME 5 PRO COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO F9/F9PRO/REALME 2 PRO/REALME U1 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A5 (2020) /A9 2020/A31 2020/REALME 5 /A11[2020]COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO REALME 9 COMPLETE Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'REALMI C25Y COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO REALMI 9I/ REAME 8I COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO REALME C17 COMP Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO REALME C20/C21/C11-2021COMP Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO REALME 5I COMP Ksh.4,200', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A53 2020/REALME 7I/REALME V3/A33-2020 COMP Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO RENO 2F/OPPOK3/REALME X COMP Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A7/A5S/A12/A12-2020/REALME 3I COMP Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO RENO 9 PRO COMPLETE LCD ORG Ksh.8,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO RENO 10 5G COMPLETE LCD OLED Ksh.8,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO RENO 10 PRO COMPLETE LCD ORG Ksh.9,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO REALMI 6 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO FIND X3 PRO COMPLETE LCD OLED Ksh.30,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO F21 PRO 5G COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO F21 PRO COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A98 5G COMPLETE LCD Ksh.3,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A78 5G COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO RENO 9 COMPLETE LCD OLED Ksh.7,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO RENO Z COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO RENO 8 Z COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO RENO 8T 4G COMPLETE LCD OLED Ksh.7,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO RENO 8T 5G COMPLETE LCD OLED Ksh.7,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO RENO 10 COMPLETE LCD OLED Ksh.8,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO FIND X3 LITE COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO FIND X3 COMPLETE LCD Ksh.30,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO F17 PRO COMPLETE LCD ORG Ksh.19,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A54S COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A78 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO RENO 4 LITE COMPLETE LCD Ksh.4,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A56 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO FIND X5 COMPLETE LCD Ksh.10,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO RENO 3 PRO 4G COMPLETE LCD Ksh.7,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO RENO 7 PRO 5G/ RENO 5 PRO 5G/ RENO 6 PRO 5G COMPLETE LCD Ksh.6,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO RENO 10X COMPLETE LCD Ksh.4,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A97 COMPLETE LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A17K COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A58 COMPLETE LCD Ksh.3,700', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A77 2020 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO RENO 8 4G COMPLETE LCD Ksh.6,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO RENO 8 COMPLETE LCD ORG Ksh.8,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO RENO 7 COMPLETE LCD ORG Ksh.16,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO RENO 8 COMPLETE LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO RENO 4 PRO/ RENO 3 PRO 5G COMPLETE LCD ORG Ksh.13,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A77S COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Oppo A35 Complete Lcd Screen Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A17/ A57 (2020) COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A96 COMPLETE LCD ORG Ksh.14,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO FIND X5 PRO COMPLETE LCD Ksh.30,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO RENO 7 5G COMPLETE LCD Ksh.5,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO RENO 7 5G COMPLETE LCD ORG Ksh.7,200', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO RENO 6 PRO COMPLETE LCD ORG Ksh.15,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A76 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO RENO 7 COMPLETE LCD Ksh.5,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A96 COMPLETE LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A95 COMPLETE LCD ORG Ksh.15,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO RENO COMPLETE LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A74 5G COMPLETE LCD Ksh.4,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A95 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A16-2021 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO RENO 6 COMPLETE LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO RENO 4 PRO/ RENO 3 PRO 5G COMPLETE LCD Ksh.5,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO RENO 6 PRO COMPLETE LCD ORG Ksh.15,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO RENO 4/A93/ RENO 4 LITE COMPLETE LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A54-2020/ A55 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO R17 COMP LCD Ksh.4,700', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO RII COMP LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO F1/A53 / F1F/ COMPLETE LCD 3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO F3+ COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A83 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A71 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A51F COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A33F/ NEO 7 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A31/NEO 5/R21201 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO R17 PRO COMP LCD Ksh.4,700', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A15 /A15 2020/A15S/ A35 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO K5 COMP LCD Ksh.4,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO RENO 4/OPPO A93 COMPLETE LCD OLED Ksh.10,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO R9SPLUS COMP LCD Ksh.3,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO R9KM COMP LCD 3,600', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A91/RENO 3/A73 2020 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO F15/F17/A73-2020 4G [NO FINGER PRINT]COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO R9SK COMP LCD Ksh.3,0000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A92S COMP LCD Ksh.4,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A79 COMP LCD Ksh.3,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A73 /F5 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO R7S COMP LCD Ksh.3,700', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO R1011 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO R831K/ NEO 3 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO R11 PLUS COMP LCD Ksh.4,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO R5 COMP LCD Ksh.7,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO R9 PLUS COMP LCD Ksh.4,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO FIND 7/OPPO X9006 COMP LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO R11S COMP LCD Ksh.4,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO R15/R15 PRO COMP LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO R7 COMP LCD Ksh.3,700', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO R7 PLUS COMP LCD Ksh.4,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO R9/ F1+/ R9M COMPLETE LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO R9S COMP LCD Ksh.3,600', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO F11 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO F11 PRO COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO F1S/ A59 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO F3 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A11 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A37 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A39 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A57 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO A77 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO F7/A3 COMPLETE LCD ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO N3 COMP LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Huawei', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO RENO Z NO FINGER PRINT COMP Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OPPO RENO 2 COMP Ksh.6,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OUKITEL C18 RO COMPLETE LCD Ksh.5,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL S23 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL A60S COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL A04 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL P40 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL P17 PRO COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL A23 PRO / L5006C COMPLETE LCD Ksh.2,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL S18 PRO COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL A60 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL A18 COMPLETE LCD Ksh.2,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL A58 LITE COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL S18 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL P38 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL A27 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL TAB W7001 LCD Ksh.2,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL P38 PRO COMPLETE LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL A33 PLUS LCD Ksh.1,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL A47 COMPLETE LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL A58 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL A49 COMPLETE LCD ORIGINAL Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL P36 PLAY COMPLETE LCD Ksh.3,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OUKITEL C15 PRO COMP LCD Ksh.4,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL A17/A23PRO LCD Ksh.1,700', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL A14 PLUS LCD Ksh.1,700', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL A14 MAX/ W4003 LCD Ksh.1,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL A35/W5002/ P15/ A25 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL A46 / L5503 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL A56/TECNO RB8S/W6004 /A56 PRO COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL P33 / W5504 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL P13/POP 2/P13PLUS COMP LCD Ksh.2,900', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL A51 LCD Ksh.2,700', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL A44 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL A33 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL A16/ /A23LCD Ksh.1,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL A12 LCD Ksh.1,700', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL A11 / TECNO S1 LCD Ksh.1,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL 6900/6910 LCD Ksh.1,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TAB ITEL 1702/PRIME 4/1703/VW-M3 30 PIN LCD Ksh.2,900', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TAB ITEL 1701 / 7C LCD Ksh.2,600', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL 1556 / 1557 LCD Ksh.2,700', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL 1551 LCD Ksh.2,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL 1550 LCD ONLY Ksh.2,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL 1550 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL 1516/ P31 LCD Ksh.1,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL 1508/1503/1506 LCD Ksh.1,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL 1507 LCD Ksh.1,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL 1505 LCD ONLY Ksh.2,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL1505 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL 1502 LCD Ksh.1,900', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL 1500 LCD Ksh.2,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL 1501 LCD Ksh.2,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL 1453 LCD Ksh.1,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL 1452 LCD Ksh.1,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL 1450 LCD Ksh.1,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL 1406/1407/1408/1409/A14 LCD Ksh.1,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL 1405 LCD Ksh.1,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL 1355 LCD Ksh.1,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL 1400 LCD Ksh.1,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL 1401 LCD Ksh.1,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL 1353/6800 LCD Ksh.1,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL A35 LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL P33 / W5504 LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL S16 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'OUKITEL C10 COMPLETE LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL A55 LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL A36 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL P36 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL P15 LCD Ksh.2,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL A33 LCD Ksh.1,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL A55 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL S32/S32 LITE COMPLETE LCD Ksh.2,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL S33 /S33+COMP LCD Ksh.2,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL S31 LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL S31 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL S15 /S15PROCOMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL S13/P32 LCD ONLY Ksh.2,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL S12 LCD Ksh.1,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL S11 / A31LCD Ksh.1,700', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL P51 LCD Ksh.2,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL P32 / S13 COMP LCD Ksh.2,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ITEL P17 COMPLETE Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X687 COMPLETE LCD OLED Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X6711 COMPLETE LCD OLED Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X6512 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X6833 COMPLETE LCD OLED Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX NOTE 12 / X6716 COMPLETE LCD OLED Ksh.5,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X6831 COMPLETE LCD Ksh.3,400', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X6820 COMPLETE LCD OLED Ksh.10,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X678 COMPLETE LCD OLED Ksh.8,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X676 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X6716 COMPLETE LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X668 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX NOTE 12 COMPLETE LCD OLED Ksh.6,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X6835/ HOT 30 PLAY/ X6819 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X671/ NOTE 12 5G /X6716 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X6515/ SMART 7 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X6821 COMPLETE LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X6825/ X6816 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X6827 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X669/ X6517/ BF6 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X6826 COMPLETE LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X675/ X675J COMPLETE LCD Ksh.4,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X698/ X697 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X6819 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X6816 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X6817 COMPLETE LCD[HOT 12 PLAY] Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X670/ X672/ X663/ X677 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Infinix X670 Complete Lcd Ksh.4,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X665 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X6511 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Infinix X663 Complete Lcd Ksh.6,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X6812 COMPLETE LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X6811/ CH9 / ZERO X PRO COMPLETE LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X662 COMPLETE LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Infinix X662 Complete Lcd Ksh.6,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX HOT 10 I/ PR652B COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX HOT 11 PLAY COMPLETE LCD Ksh.4,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X551 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X609 [TOUCH] COMPLETE LCD Ksh.2,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X693/ LE7/ POVA 2 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X689/X689C/HOT 10T/HOT 10S/KF7 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X660/CD8/CAMON 15 PRIMIER COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X682/X683/KE7/SPARK 6/CAMON 16 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X5516/KB2 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX HOT 11 COMPLETE LCD Ksh.4,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X658 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X690 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X625 COMP LCD Ksh.4,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X626 /X627/CB7 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X653/BB4/POP 3 PLUS /SMART 4 COMP LCD Ksh.2,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X624 / SPARK 3/KB7 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X609 [GLASS] COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X622/X623/ S3X COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X620 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X610B/NOTE 6 COMP LCD Ksh.5,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X605 COMPLETE LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X606 / HOT 6 [GLASS] COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X604 / NOTE 5 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X602/ZERO 4 PLUS COMP LCD Ksh.4,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X603/X603B /ZERO 5 COMP LCD Ksh.4,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X600 LCD ONLY Ksh.2,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X601- NOTE 3 COMP LCD Ksh.3,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X600/ HOT NOTE 2 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X573( HOT S3) COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X572 -NOTE 4 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X571 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X559 /HOT 5 LITE COMP LCD Ksh.2,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X557 /HOT 4 COMP LCD Ksh.2,900', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X554 LCD ONLY Ksh.2,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X555 LCD ONLY Ksh.2,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X555 /ZERO 4 COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X553 /X554 -HOT 3 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X552 / ZERO 3 COMP LCD Ksh.2,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X551 COPY LCD Ksh.2,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X551 LCD Ksh.1,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X5515/SMART 2/F4 COMPLETE LCD Ksh.2,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X5514 /SMART 2 PRO COMP LCD Ksh.2,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X522 COMP LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X510 / HOT 2 LCD Ksh.1,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X521 LCD ONLY Ksh.2,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X521/ HOT S COMPLETE LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X510 / HOT 2 COMPLETE LCD Ksh.2,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X507/INFINIX HOT LCD Ksh.1,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X502 COMP LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X503 COMP LCD Ksh.5,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X505 COMP LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X505/TECNO H7 LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X506 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX SMART X5010 COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX P5/X403 LCD Ksh.1,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X6823 COMPLETE Ksh.3,000 ', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X6815 COMPLETE Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'LG X520 COMPLETE LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'INFINIX X608 BACK COVER Ksh.500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NEON RAY 2 UNISONIC LCD Ksh.2,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NEON PLUS LCD Ksh.2,800', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NEON RAY 2 LCD Ksh.2,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NEON RAY PRO LCD Ksh.2,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NEON RAY LCD Ksh.1,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NEON STORM COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NEON NOVA LCD Ksh.2,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NEON NOVA COMP LCD Ksh.3,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NEON RAY COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'ALCATEL NEON KICKA 4 /VF320 LCD Ksh.1,500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'TAB ALCATEL NEON TAB 1216X/1215/1213 PIXI 7 LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'NEON LITE COMP LCD Ksh.3,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Touch Ksh.1,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR 1.jpeg' },
+    { name: 'Charging system,Smart phone Ksh.300', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/HT2.png' },
+    { name: 'Charging System Type-C Ksh.500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/HT1.png' },
+    { name: 'Charging System Kabambe Ksh.200', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/HT2.png' },
+    { name: 'Battery Kabambe Ksh.500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/HT1.png' },
+    { name: 'Battery Neon Ray/Neon Ray Pro Ksh.1,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/HT2.png' },
+    { name: 'Battery F1/A16 Ksh.1,000', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/HT1.png' },
+    { name: 'Pune Data Cable Ksh.300', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/HT2.png' },
+    { name: 'Privacy Screen Protector Ksh.500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/HT1.png' },
+    { name: '3D Screen Protector Ksh.300', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/HT2.png' },
+    { name: 'Mirror Screen Protector Ksh.500', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/HT1.png' },
+    { name: 'Glass Screen Protector Ksh.200', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR HT2.png' },
+    { name: 'Speaker Ksh.300', image: 'https://raw.githubusercontent.com/8-TECH/8TECH-/main/SR HT1.png' },
+
+   
+    ];
+
+  function searchItem() {
+    var searchInput = document.getElementById('searchInput');
+    var searchResults = document.getElementById('searchResults');
+    var notFoundMessage = document.getElementById('notFoundMessage');
+    var defaultImage = document.getElementById('defaultImage');
+
+    var searchTerm = searchInput.value.trim().toLowerCase();
+
+    if (searchTerm === '') {
+      notFoundMessage.innerText = 'Please enter a search term.';
+      searchResults.innerHTML = '';
+    } else {
+      var foundItems = items.filter(function (item) {
+        return item.name.toLowerCase().includes(searchTerm);
+      });
+
+      if (foundItems.length > 0) {
+        notFoundMessage.innerText = '';
+        searchResults.innerHTML = '';
+
+        foundItems.forEach(function (foundItem) {
+          var resultDiv = document.createElement('div');
+          resultDiv.className = 'search-result-item';
+
+          var resultImage = document.createElement('img');
+          resultImage.src = foundItem.image;
+          resultImage.alt = 'Item Image';
+          resultImage.className = 'result-image';
+
+          var resultText = document.createElement('p');
+          resultText.innerText = 'Found: ' + foundItem.name;
+
+          resultDiv.appendChild(resultImage);
+          resultDiv.appendChild(resultText);
+
+          searchResults.appendChild(resultDiv);
+        });
+      } else {
+        notFoundMessage.innerText = 'Item not found';
+        searchResults.innerHTML = '';
+      }
+    }
+  }
+
+  </script>
+
+<footer>
+  <p>&copy; 2024 Hamzone Tech.All rights reserved.</p>
+</footer>
+
+</body>
+  </html>
